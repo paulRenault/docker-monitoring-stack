@@ -1,0 +1,11 @@
+global:
+  resolve_timeout: 5m
+route:
+  receiver: email_receiver
+receivers:
+    - name: email_receiver
+      email_configs:
+        - to: toto@exemple.fr
+          smarthost: mailhog:1025
+          from: local@localhost.local
+          require_tls: false

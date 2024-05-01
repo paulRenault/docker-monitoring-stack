@@ -1,0 +1,6 @@
+groups:
+ - name: Count greater than 20
+   rules:
+   - alert: CountGreaterThan20
+     expr: prometheus_http_requests_total > 20
+     for: 10s
